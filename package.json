@@ -1,0 +1,17 @@
+{
+  "name": "gintama_quiz",
+  "version": "1.0.0",
+  "description": "A fun Gintama (anime) quiz!",
+  "main": "gintama_quiz.js",
+  "scripts": {
+    "start": "node gintama_quiz.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gintama",
+    "quiz",
+    "anime"
+  ],
+  "author": "teslatickles",
+  "license": "MIT"
+}
