@@ -6,6 +6,10 @@ const inquirer = require('inquirer');
 const commander = require('commander');
 const chalk = require("chalk");
 
+const appConfig = require("./config/main-config.js");
+
+appConfig.init();
+
 clear();
 
 console.log(chalk.blue(`Gintama Quiz #1\n`));
