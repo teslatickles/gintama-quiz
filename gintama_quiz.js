@@ -38,7 +38,7 @@ const gintamaQuestions = [
 	name: "manga",    
 	message: "What manga style does Gintama read?",
 	choices: [
-	    "Shonen Jump",
+	    "Shounen Jump",
 	    "Shojo",
 	    "Sci-Fi",
 	    "Seinen"
@@ -47,7 +47,7 @@ const gintamaQuestions = [
     {
 	type: "list",
 	name: "shinpachi",
-	message: "How old is Shimura Shinpachi (at least in Season 1?",
+	message: "How old is Shimura Shinpachi (at least in Season 1?)",
 	choices: [
 	    "15",
 	    "19",
@@ -66,7 +66,7 @@ const gintamaQuestions = [
 	    "Sakata Gintoki"
 	],
     },
-    {
+    { 
 	type: "list",
 	name: "pet",    
 	message: "What is the name of Kagura's pet dog god?",
@@ -76,10 +76,65 @@ const gintamaQuestions = [
 	    "Komohana",
 	    "Inugami"
         ]
+    },
+    { 
+	type: "list",
+	name: "aliens",    
+	message: "The aliens that have taken over Gintama universe are referred to as what? ",
+	choices: [
+	    "Tamanori",
+	    "Sadaharu",
+	    "Amanto",
+	    "Starry Sky People"
+        ]
+    },
+    { 
+	type: "list",
+	name: "faction",    
+	message: "What faction is Katsura Kutarou a leader of?",
+	choices: [
+	    "Edo",
+	    "Kopancha",
+	    "Yato",
+	    "Joui"
+        ]
+    },
+    { 
+	type: "list",
+	name: "setting",    
+	message: "Where does Gintama take place (the setting)?",
+	choices: [
+	    "Kyoto",
+	    "Meiji",
+	    "Hokkaido",
+	    "Edo"
+        ]
+    },
+    { 
+	type: "list",
+	name: "explosive",    
+	message: "What is the name of Banzou's discreet, explosive invention that looks like a really dull figurine?",
+	choices: [
+	    "Time Bomb",
+	    "Jani",
+	    "Justaway",
+	    "Inugami"
+        ]
     }
 ];
 
-const answerKey = ["2006", "Silver Soul", "Shonen Jump", "16", "Sakata Gintoki", "Sadaharu"];
+const answerKey = [
+	"2006", 
+	"Silver Soul", 
+	"Shounen Jump", 
+	"16", 
+	"Sakata Gintoki", 
+	"Sadaharu",
+	"Amanto",
+	"Joui",
+	"Edo",
+	"Justaway"
+];
 
 inquirer.prompt(gintamaQuestions).then(answers => {
 
@@ -103,6 +158,18 @@ inquirer.prompt(gintamaQuestions).then(answers => {
     if (answers.pet === answerKey[5]) {
         correctCount++;
     }
+    if (answers.aliens === answerKey[6]) {
+	correctCount++;
+    }
+    if (answers.faction === answerKey[7]) {
+        correctCount++;
+    }
+    if (answers.setting === answerKey[8]) {
+	correctCount++;
+    }
+    if (answers.explosive === answerKey[9]) {
+	correctCount++;
+    };
     console.log(chalk.red(`${correctCount}/${gintamaQuestions.length} questions answered correctly!\n`));
 });
 
