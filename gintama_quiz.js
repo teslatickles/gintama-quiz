@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const commander = require('commander');
 const chalk = require("chalk");
 
-const appConfig = require("./config/main-config.js");
+const appConfig = require("./src/config/main-config.js");
 
 appConfig.init();
 
